@@ -1,0 +1,39 @@
+name: ChatFilterPlugin
+main: chatfilterpackage.plugin.ChatFilterMain
+version: 1.0
+api-version: 1.16
+commands:
+    bwadd:
+      description: Adds a bad word to the bad word list. 
+      usage: /<command> 
+    bwremove:
+      description: Removes a bad word from the bad word list. 
+      usage: /<command>
+    badwordadd:
+      description: Adds a bad word to the bad word list. 
+      usage: /<command> 
+    badwordremove:
+      description: Removes a bad word from the bad word list. 
+      usage: /<command>
+    badwordlist:
+      description: Lists all of the bad words saved. 
+      usage: /<command>
+    bwlist:
+      description: Lists all of the bad words saved. 
+      usage: /<command>
+permissions:
+     chatfilter.*:
+        description: Permission for all chatfilter commands.
+        children:
+           chatfilter.addbadwords: true
+           chatfilter.removebadwords: true
+           chatfilter.listbadwords: true
+           chatfilter.exemptfromfilter: true
+     chatfilter.addbadwords:
+        description: Permission to add bad words.
+     chatfilter.removebadwords:
+        description: Permission to remove bad words.       
+     chatfilter.listbadwords:
+        description: Permission to list bad words.
+     chatfilter.exemptfromfilter:
+        description: Permission to be exempt from the filter.
